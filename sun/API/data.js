@@ -19,7 +19,6 @@ var data = {
     // Day use "DAYOFWEEK" : 1=sunday, 2=monday ...
     // Season : autumn, summer, spring or winter (/!\ lowcase)
 
-
     getCreneauSeasonWeekHour:function(season, week, start, end, callback)
     {
         var intervalle = "";
@@ -200,7 +199,7 @@ getMoodSeasonWeekHour:function(mood,season, week, start, end, callback)
     //todo: date par now()
     get5LastGenre:function(genre,callback) {
 
-        return db.query("SELECT  W.title, artiste_diffuser as artist FROM winmedia_media W LEFT JOIN musique_auditeur_tbl M ON M.id_musique = W._jazler_id WHERE _genre4 ='"+genre+"' AND year(date_heure_diffusion_reelle)= year('NOW()') AND dayofyear(date_heure_diffusion_reelle)<=dayofyear('NOW()') ANd dayofyear(date_heure_diffusion_reelle)>=dayofyear('NOW()')-6 order by date_heure_diffusion_reelle desc limit 5;",callback)
+        return db.query("SELECT  W.title, artiste_diffuser as artist FROM winmedia_media W LEFT JOIN musique_auditeur_tbl M ON M.id_musique = W._jazler_id WHERE _genre4 ='"+genre+"' order by date_heure_diffusion_reelle desc limit 5;",callback)
     },
     get5LastMood:function(mood,callback){
         switch (mood) {

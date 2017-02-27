@@ -1,26 +1,26 @@
-<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='./stylesheets/style.css' />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="javascripts/fullPage.js-master/jquery.fullPage.css" />
     <link href="./dist/roundslider.min.css" rel="stylesheet" />
-    <link href="/javascripts/c3js/c3.css" rel="stylesheet" type="text/css">
+    <link href="./javascripts/c3js/c3.css" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.roundslider/1.3/roundslider.min.js"></script>
     <script type="text/javascript" src="javascripts/fullPage.js-master/jquery.fullPage.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="/javascripts/c3js/c3.min.js"></script>
+    <script src="./javascripts/c3js/c3.min.js"></script>
   </head>
 
 <body>
 <div id="container">
   <div id="fullpage">
       <div id="pageOne" class="section">
-        <img src="/images/logo-home.png">
+        <img src="./images/logo-home.png">
         <p class="pageOnePremierP"><span id="randomWeek"></span></p>
         <p class="pageOneDeuxiemeP"><span id="randomWeek2"></span></p>
         <div id="pochette">
@@ -29,10 +29,10 @@
         </div>
         <a class="js-scrollTo">
           <div id="MySunLogo">
-            <img src="/images/mysunlogo.png">
+            <img src="./images/mysunlogo.png">
           </div>
           <div id="Fleche">
-            <img src="/images/Logofleche.png">
+            <img src="./images/Logofleche.png">
           </div>
         </a>
       </div>
@@ -65,7 +65,7 @@
         </div>
         <div class="blocTwoTwo">
           <p class="inlineBlocSE">SEMAINE</p>
-              <input type="image" src="/images/bouton_semaine_weekend_page2.png" id = "weekOrWeekEnd1" class="play" onclick="toggleOne(this); toggleThree(document.getElementById('weekOrWeekEnd')); changeBubble(getRoad());"/>
+              <input type="image" src="./images/bouton_semaine_weekend_page2.png" id = "weekOrWeekEnd1" class="play" onclick="toggleOne(this); toggleThree(document.getElementById('weekOrWeekEnd')); changeBubble(getRoad());"/>
           <p class="inlineBlocWE">WEEK-END</p>
         </div>
         <div class="blocTwoThree">
@@ -85,37 +85,37 @@
             <p>Vous êtes plutôt du genre ...</p>
           </div>
           <audio id="Alternative">
-            <source src="/music/Alternative.mp3" type="audio/mp3">
+            <source src="./music/Alternative.mp3" type="audio/mp3">
           </audio>
           <audio id="Rock">
-            <source src="/music/Rock.mp3" type="audio/mp3">
+            <source src="./music/Rock.mp3" type="audio/mp3">
           </audio>
           <audio id="Pop">
-            <source src="/music/Pop.mp3" type="audio/mp3">
+            <source src="./music/Pop.mp3" type="audio/mp3">
           </audio>
           <audio id="Jazz">
-            <source src="/music/Jazz.mp3" type="audio/mp3">
+            <source src="./music/Jazz.mp3" type="audio/mp3">
           </audio>
           <audio id="Urban">
-            <source src="/music/Urban.mp3" type="audio/mp3">
+            <source src="./music/Urban.mp3" type="audio/mp3">
           </audio>
           <audio id="Electro">
-            <source src="/music/Electro.mp3" type="audio/mp3">
+            <source src="./music/Electro.mp3" type="audio/mp3">
           </audio>
           <audio id="Sentimentale">
-            <source src="/music/Sentimentale.mp3" type="audio/mp3">
+            <source src="./music/Sentimentale.mp3" type="audio/mp3">
           </audio>
            <audio id="Cool">
-            <source src="/music/Cool.mp3" type="audio/mp3">
+            <source src="./music/Cool.mp3" type="audio/mp3">
           </audio>
           <audio id="Stimulante">
-            <source src="/music/Energique.mp3" type="audio/mp3">
+            <source src="./music/Energique.mp3" type="audio/mp3">
           </audio>
           <audio id="Agressive">
-            <source src="/music/Enervee.mp3" type="audio/mp3">
+            <source src="./music/Enervee.mp3" type="audio/mp3">
           </audio>
           <audio id="Nostalgique">
-            <source src="/music/Nostalgique.mp3" type="audio/mp3">
+            <source src="./music/Nostalgique.mp3" type="audio/mp3">
           </audio>
           <div id="bubble3" width="800" height="600"></div>
           <div id="ExplicationBoulles">
@@ -129,18 +129,18 @@
               <p>A vous de jouer !</p>
             </div>
             <div id="boutonBubleTopLeft">
-              <img src="/images/SUN-LABEL2-BLEU.svg">
+              <img src="./images/SUN-LABEL2-BLEU.svg">
             </div>
             <div id="boutonBubleTopRight">
               <p>Genre</p>
-              <input type="image" src="/images/ambiance_on.svg" id="moodVsGenre" class="play" onclick="toggleTwo(this); changeBubble(getRoad());"/>
+              <input type="image" src="./images/ambiance_on.svg" id="moodVsGenre" class="play" onclick="toggleTwo(this); changeBubble(getRoad());"/>
               <p>Ambiance</p>
             </div>
           </div>
           <div id="boutonBubleBottom">
             <div id="boutonBubleBottomLeft">
               <p>Semaine</p>
-              <input type="image" src="/images/btn-semaine.svg" id="weekOrWeekEnd" class="play" onclick="toggleThree(this);toggleOne(document.getElementById('weekOrWeekEnd1'));changeBubble(getRoad());"/>
+              <input type="image" src="./images/btn-semaine.svg" id="weekOrWeekEnd" class="play" onclick="toggleThree(this);toggleOne(document.getElementById('weekOrWeekEnd1'));changeBubble(getRoad());"/>
               <p>Week-end</p>
             </div>
             <div id="boutonBubleBottomRight">
@@ -162,7 +162,7 @@
         <a name="slide4"></a>
         <div id="pageFourTop">
           <div id="pageFourTopLeft">
-            <img src="/images/page4_logo.png">
+            <img src="./images/page4_logo.png">
           </div>
           <div id="pageFourTopCenter">
             <div id="pageFourTopCenterBarre">
@@ -182,41 +182,41 @@
             <div id="toolTipCover2"></div>
             <div id="Cover2"></div>
           </div>
-          <img src="/images/page4_logo_sun.png">
+          <img src="./images/page4_logo_sun.png">
           <p>Dans vos oreilles ces dernières 24h...</p>
         </div>
       </div>
 
       <div id="pageFive" class="section">
-        <img src="/images/sponsor/sun_logo.png" style="width:11%;position:absolute;top:2px;right:25px;">
+        <img src="./images/sponsor/sun_logo.png" style="width:11%;position:absolute;top:2px;right:25px;">
         <h1>La Team</h1>
         <div id="firstLine">
           <a href="https://www.linkedin.com/in/albanlorillard">
             <div id="alban">
-              <img src="/images/profil/Alban.png">
+              <img src="./images/profil/Alban.png">
               <p class="profilNom">Alban Lorillard</p>
               <p class="profilCursus">Polytech</p>
             </div>
           </a>
           <div id="raph">
-            <img src="/images/profil/Raphael.png">
+            <img src="./images/profil/Raphael.png">
             <p class="profilNom">Raphaël Barraud</p>
             <p class="profilCursus">Polytech</p>
           </div>
           <a href="https://www.linkedin.com/in/romain-charretteur-1973a4112/">
             <div id="rom">
-              <img src="/images/profil/Romain.png">
+              <img src="./images/profil/Romain.png">
               <p class="profilNom">Romain Charretteur</p>
               <p class="profilCursus">Polytech</p>
             </div>
           </a>
           <div id="axel">
-            <img src="/images/profil/Axel.png">
+            <img src="./images/profil/Axel.png">
             <p class="profilNom">Axel Juget</p>
             <p class="profilCursus">Polytech</p>
           </div>
           <div id="pingPong">
-            <img src="/images/profil/Pingpong.png">
+            <img src="./images/profil/Pingpong.png">
             <p class="profilNom">Xiqing Zhang</p>
             <p class="profilCursus">Polytech</p>
           </div>
@@ -224,38 +224,38 @@
         <div id="secondLine">
           <a href="https://www.behance.net/arthurpronier">
             <div id="Arthur">
-              <img src="/images/profil/Arthur.png">
+              <img src="./images/profil/Arthur.png">
               <p class="profilNom">Arthur Pronier</p>
               <p class="profilCursus">AGR</p>
             </div>
           </a>
           <div id="Greg">
-            <img src="/images/profil/Greg.png">
+            <img src="./images/profil/Greg.png">
             <p class="profilNom">Grégoire Teyssandier</p>
             <p class="profilCursus">AGR</p>
           </div>
           <a href="https://www.linkedin.com/in/cl%C3%A9lia-largenton-531857a5/?trk=nav_responsive_tab_profile_pic">
             <div id="Clelia">
-              <img src="/images/profil/clelia.png">
+              <img src="./images/profil/clelia.png">
               <p class="profilNom">Clélia Largenton</p>
               <p class="profilCursus">SciencesCom</p>
             </div>
           </a>
           <a href="https://www.linkedin.com/in/jeanne-lore-garcia/">
             <div id="Jeanne">
-              <img src="/images/profil/jeanne-lore.png">
+              <img src="./images/profil/jeanne-lore.png">
               <p class="profilNom">Jeanne-Lore Garcia</p>
               <p class="profilCursus">SciencesCom</p>
             </div>
           </a>
             <div id="Cheezy">
-            <img src="/images/profil/Cheezy.png">
+            <img src="./images/profil/Cheezy.png">
             <p class="profilNom">Axelle Claireaux</p>
             <p class="profilCursus">SciencesCom</p>
           </div>
           <a href="https://www.linkedin.com/in/%C3%A9lisa-ferry-87b98299/?trk=nav_responsive_tab_profile_pic">
             <div id="Elise">
-              <img src="/images/profil/Elisa.png">
+              <img src="./images/profil/Elisa.png">
               <p class="profilNom">Élisa Ferry</p>
               <p class="profilCursus">SciencesCom</p>
             </div>
@@ -264,57 +264,57 @@
         <div id="sponsor">
           <a href="http://www.paysdelaloire.fr/">
           <div class="logoSpons pdl">
-            <img src="/images/sponsor/pays-de-la-loire.png">
+            <img src="./images/sponsor/pays-de-la-loire.png">
           </div>
           </a>
           <a href="http://www.nantesmetropole.fr//">
           <div class="logoSpons nantesmetropole">
-            <img src="/images/sponsor/nantes-metrpole.png">
+            <img src="./images/sponsor/nantes-metrpole.png">
           </div>
           </a>
           <a href="http://www.ouestmedialab.fr/">
           <div class="logoSpons oml">
-            <img src="/images/sponsor/ouest-media-lab.png">
+            <img src="./images/sponsor/ouest-media-lab.png">
           </div>
           </a>
           <a href="http://www.univ-nantes.fr/">
           <div class="logoSpons univ">
-            <img src="/images/sponsor/univ-nantes.png">
+            <img src="./images/sponsor/univ-nantes.png">
           </div>
           </a>
           <a href="http://www.hyblab.fr/">
           <div class="logoSpons hyblab">
-            <img src="/images/sponsor/hyblab.png">
+            <img src="./images/sponsor/hyblab.png">
           </div>
           </a>
           <a href="http://www.stereolux.org/">
           <div class="logoSpons stereolux">
-            <img src="/images/sponsor/stereolux.png">
+            <img src="./images/sponsor/stereolux.png">
           </div>
           </a>
           <a href="http://sciencescom.audencia.com/">
           <div class="logoSpons sciencescom">
-            <img src="/images/sponsor/audencia-sciencecom.png">
+            <img src="./images/sponsor/audencia-sciencecom.png">
           </div>
           </a>
           <a href="http://web.polytech.univ-nantes.fr/">
           <div class="logoSpons popo">
-            <img src="/images/sponsor/polytech.png">
+            <img src="./images/sponsor/polytech.png">
           </div>
           </a>
           <a href="http://www.agrnantes.fr/">
           <div class="logoSpons agr">
-            <img src="/images/sponsor/agr.png">
+            <img src="./images/sponsor/agr.png">
           </div>
           </a>
           <a href="https://creativecommons.org/licenses/by/2.0/">
           <div class="logoSpons ccsss">
-            <img src="/images/sponsor/cc.png">
+            <img src="./images/sponsor/cc.png">
           </div>
           </a>
           <a href="https://opensource.org/">
           <div class="logoSpons openss">
-            <img src="/images/sponsor/open-source.png">
+            <img src="./images/sponsor/open-source.png">
           </div>
           </a>
         </div>
@@ -324,8 +324,8 @@
       <script src="./javascripts/pageTwo.js"></script>
       <script src="./javascripts/pageThree.js"></script>
       <script src="./javascripts/pageFour.js"></script>
-      <!--script src="/javascripts/APlayer.min.js"></script->
-      <script src="/javascripts/audio_player.js"></script-->
+      <!--script src="./javascripts/APlayer.min.js"></script->
+      <script src="./javascripts/audio_player.js"></script-->
   </div>
 </div>
 
