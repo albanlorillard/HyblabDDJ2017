@@ -160,7 +160,7 @@ html, body{
 	background-color: #004266;
 	min-height: 100%;
 	text-align: center;
-	background-image: url("/images/tout_les_tirets.png");
+	background-image: url("../images/tout_les_tirets.png");
 	background-size: 100% 100%;
 }
 
@@ -224,7 +224,7 @@ html, body{
 #pageTwo {
 	background-color: #FFD000;
 	min-height: 100%;
-	background-image: url("/images/page2_tiret.png");
+	background-image: url("../images/page2_tiret.png");
 	background-size: 100% 100%;
 	text-align: center;
 	padding-top: 2%;
@@ -302,10 +302,10 @@ html, body{
 }
 
 /* FORM */
-.printemps{background-image:url(/images/page2_feuille.png);}
-.ete{background-image:url(/images/page2_soleil.png);}
-.automne{background-image:url(/images/page2_automne.png);}
-.hiver{background-image:url(/images/page2_hiver.png);}
+.printemps{background-image:url(../images/page2_feuille.png);}
+.ete{background-image:url(../images/page2_soleil.png);}
+.automne{background-image:url(../images/page2_automne.png);}
+.hiver{background-image:url(../images/page2_hiver.png);}
 
 .cc-selector input:active +.drinkcard-cc{opacity: .9;}
 .cc-selector input:checked +.drinkcard-cc{
@@ -416,7 +416,7 @@ input[type=range]::-ms-track {
   -webkit-appearance: none;
   height: 28px;
   width : 62px;
-  background-image: url("/images/btn_glissiere.png");
+  background-image: url("../images/btn_glissiere.png");
   background-size: cover;
   margin: -5px;
   background-color: #FFD000;
@@ -427,7 +427,7 @@ input[type=range]::-ms-track {
   -moz-appearance: none;
   height: 28px;
   width : 62px;
-  background-image: url("/images/btn_glissiere.png");
+  background-image: url("../images/btn_glissiere.png");
   background-size: cover;
   margin: -5px;
   background-color: #FFD000;
@@ -437,7 +437,7 @@ input[type=range]::-ms-track {
 #pageTwo input[type=range]::-ms-thumb {
   height: 28px;
   width : 62px;
-  background-image: url("/images/btn_glissiere.png");
+  background-image: url("../images/btn_glissiere.png");
   background-size: cover;
   margin: -5px;
   background-color: #FFD000;
@@ -448,7 +448,7 @@ input[type=range]::-ms-track {
   
   max-width : 450px;
   height: 18px;
-  background: url("/images/glissiere.png");
+  background: url("../images/glissiere.png");
   background-size: cover;
   background-color: #FECB2E;
   border: 0px solid transparent;
@@ -458,7 +458,7 @@ input[type=range]::-ms-track {
   -webkit-appearance: none;
   height: 28px;
   width : 62px;
-  background-image: url("/images/btn-timeline.svg");
+  background-image: url("../images/btn-timeline.svg");
   background-size: cover;
   margin: -5px;
   background-color: #FECB2E;
@@ -469,7 +469,7 @@ input[type=range]::-ms-track {
   -moz-appearance: none;
   height: 28px;
   width : 62px;
-  background-image: url("/images/btn-timeline.svg");
+  background-image: url("../images/btn-timeline.svg");
   background-size: cover;
   margin: -5px;
   background-color: #FECB2E;
@@ -479,7 +479,7 @@ input[type=range]::-ms-track {
 #pageThree input[type=range]::-ms-thumb {
   height: 28px;
   width : 62px;
-  background-image: url("/images/btn-timeline.svg");
+  background-image: url("../images/btn-timeline.svg");
   background-size: cover;
   margin: -5px;
   background-color: #FECB2E;
@@ -490,7 +490,7 @@ input[type=range]::-ms-track {
   
   max-width : 450px;
   height: 18px;
-  background: url("/images/glissiere.png");
+  background: url("../images/glissiere.png");
   background-size: cover;
   background-color: #FECB2E;
   border: 0px solid transparent;
@@ -511,14 +511,14 @@ input[type=range]::-ms-track {
 input[type=range]::-moz-range-track {
   max-width : 450px;
   height: 18px;
-  background: url("/images/glissiere.png");
+  background: url("../images/glissiere.png");
   background-size: cover;
 }
 
 input[type=range]::-ms-track {
   max-width : 450px;
   height: 18px;
-  background: url("/images/glissiere.png");
+  background: url("../images/glissiere.png");
   background-size: cover;
 }
 
@@ -641,7 +641,7 @@ input:checked + .slider:before {
 
 #pageThree {
 	min-height: 100%;
-	background-image: url("/images/fond.png");
+	background-image: url("../images/fond.png");
 	background-size: 100% 100%;
   	background-color: #FECB2E;
   	z-index: 5;
@@ -653,7 +653,7 @@ input:checked + .slider:before {
 	display: inline-block;
   	margin:0;
   	padding:0;
-  	background: url(/images/fond-matiere.png) no-repeat center fixed; 
+  	background: url(../images/fond-matiere.png) no-repeat center fixed; 
   	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
   	background-size: cover; /* version standardisée */
   	margin-left: 1%;
@@ -839,7 +839,7 @@ input:checked + .slider:before {
 	background-color: #FFCC00;
 	height: 100%;
 	text-align: center;
-	background-image: url("/images/page4_tiret.png");
+	background-image: url("../images/page4_tiret.png");
 	background-size: 100% 100%;
 }
 
@@ -868,7 +868,7 @@ input:checked + .slider:before {
 }
 
 #pageFourTopCenterBarre {
-	background-image: url("/images/page4_tiret_haut_graphique.png");
+	background-image: url("../images/page4_tiret_haut_graphique.png");
 	background-size: 100% 100%;
 	width: 76.7%;
 	margin-left: 4.5%;
@@ -987,7 +987,7 @@ input:checked + .slider:before {
 }
 
 .rs-block {
-	background-image: url("/images/btn-saison-fonds.png");
+	background-image: url("../images/btn-saison-fonds.png");
 	background-size: 100% 100%;
 }
 
