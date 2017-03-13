@@ -4,7 +4,7 @@
 
 // Mysql connection
 var mysql = require('mysql');        // Mysql NodeJS Modules.
-var configDB = require('./db.json'); // The JSON file with the database config connection
+var configDB = require('./db2.json'); // The JSON file with the database config connection
 
 
 /*var db = mysql.createConnection(configDB);

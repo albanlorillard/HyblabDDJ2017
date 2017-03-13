@@ -20,12 +20,12 @@ $(document).on('input change', '#timeline2', function() {
 function toggleOne(el){
     if(el.className!="pause")
     {
-        el.src='/images/bouton_semaine_weekend_page2v2.png';
+        el.src='./images/bouton_semaine_weekend_page2v2.png';
         el.className="pause";
     }
     else if(el.className=="pause")
     {
-        el.src='/images/bouton_semaine_weekend_page2.png';
+        el.src='./images/bouton_semaine_weekend_page2.png';
         el.className="play";
     }
     return false;
@@ -34,12 +34,12 @@ function toggleOne(el){
 function toggleTwo(el){
     if(el.className!="pause")
     {
-        el.src='/images/ambiance_off.svg';
+        el.src='./images/ambiance_off.svg';
         el.className="pause";
     }
     else if(el.className=="pause")
     {
-    	el.src='/images/ambiance_on.svg';
+    	el.src='./images/ambiance_on.svg';
         el.className="play";
     }
     return false;
@@ -48,12 +48,12 @@ function toggleTwo(el){
 function toggleThree(el){
     if(el.className!="pause")
     {
-       el.src='/images/btn-weekend.svg';
+       el.src='./images/btn-weekend.svg';
        el.className="pause";
     }
     else if(el.className=="pause")
     {
-        el.src='/images/btn-semaine.svg';
+        el.src='./images/btn-semaine.svg';
         el.className="play";
     }
     
@@ -69,28 +69,28 @@ function synchroRadio()
 function changeImagePrintemps()
 {
     var img = document.getElementById("image");
-    img.src="/images/btn-saison1.png";
+    img.src="./images/btn-saison1.png";
     return false;
 }
 
 function changeImageHiver()
 {
    var img = document.getElementById("image");
-   img.src="/images/btn-saison2.png";
+   img.src="./images/btn-saison2.png";
 	return false;
 }
 
 function changeImageAutomne()
 {
     var img = document.getElementById("image");
-    img.src="/images/btn-saison4.png";
+    img.src="./images/btn-saison4.png";
 	return false;
 }
 
 function changeImageEte()
 {
     var img = document.getElementById("image");
-    img.src="/images/btn-saison3.png";
+    img.src="./images/btn-saison3.png";
     return false;
 }
 

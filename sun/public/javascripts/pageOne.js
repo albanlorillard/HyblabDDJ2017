@@ -18,14 +18,14 @@ function coverToolTipOff()
 
 function giveCovers(genre)
 {
-	$.getJSON('/5LastGenre/'+genre+'/', function(data2)
+	$.getJSON('./5LastGenre/'+genre+'/', function(data2)
 	{
 		var CoverList = "";
 		for (var i = 0, len = data2.length; i < len; i++) {
 			(function(i) {
 				var title=data2[i].title;
 				var artist=data2[i].artist;
-				$.getJSON('/Cover/' + artist + '/' + title + '/', function (data3) {
+				$.getJSON('./Cover/' + artist + '/' + title + '/', function (data3) {
 					if (data3 && data3.track && data3.track.album && data3.track.album.image && (data3.track.album.image[2]['#text'] != "")) {
 						Cover = data3.track.album.image[2]['#text'];
 						CoverList += "<img src=\"" + Cover + "\"  onMouseOver=' coverToolTipOn(\"" + esc_quot(artist) + "\", \"" + esc_quot(title) + "\");' onMouseOut='coverToolTipOff();'/>";
@@ -42,14 +42,14 @@ function giveCovers(genre)
 }
 function giveCoversMood(genre)
 {
-    $.getJSON('/5LastMood/'+genre+'/', function(data2)
+    $.getJSON('./5LastMood/'+genre+'/', function(data2)
     {
         var CoverList = "";
         for (var i = 0, len = data2.length; i < len; i++) {
             (function(i) {
 				var title=data2[i].title;
 				var artist=data2[i].artist;
-				$.getJSON('/Cover/' + artist + '/' + title + '/', function (data3) {
+				$.getJSON('./Cover/' + artist + '/' + title + '/', function (data3) {
 					if (data3 && data3.track && data3.track.album && data3.track.album.image && (data3.track.album.image[2]['#text'] != "")) {
 						Cover = data3.track.album.image[2]['#text'];
 						CoverList += "<img src=\"" + Cover + "\"  onMouseOver=' coverToolTipOn(\"" + esc_quot(artist) + "\", \"" + esc_quot(title) + "\");' onMouseOut='coverToolTipOff();'/>";
@@ -70,7 +70,7 @@ function putRandWeek()
 	rand = Math.floor(Math.random() * 11) + 1;
     switch (rand) {
     	case 1 :
-    		$.getJSON('/ThisWeekRock/', function(data) 
+    		$.getJSON('./ThisWeekRock/', function(data)
     		{ 
     			number=data[0].value;
 				if (number>1)
@@ -85,7 +85,7 @@ function putRandWeek()
     		
     		break;
     	case 2 :
-    		$.getJSON('/ThisWeekAlternativeEtPunk/', function(data) { 
+    		$.getJSON('./ThisWeekAlternativeEtPunk/', function(data) {
     			number=data[0].value;
 				if (number>1)
     				document.getElementById("randomWeek").innerHTML ="Cette semaine, " + number + " auditeurs ont partagé des musiques alternatives et punks."
@@ -98,7 +98,7 @@ function putRandWeek()
 			});
     		break;
     	case 3 :
-    		$.getJSON('/ThisWeekUrban/', function(data) {
+    		$.getJSON('./ThisWeekUrban/', function(data) {
     			number=data[0].value;
 				if (number>1)
     				document.getElementById("randomWeek").innerHTML ="Cette semaine, " + number + " auditeurs ont choisi de vous faire découvrir des musiques urbaines."
@@ -110,7 +110,7 @@ function putRandWeek()
     		});
     		break;
     	case 4 :
-    		$.getJSON('/ThisWeekElectronica/', function(data) { 
+    		$.getJSON('./ThisWeekElectronica/', function(data) {
     			number=data[0].value;
 				if (number>1)
     				document.getElementById("randomWeek").innerHTML ="Cette semaine, " + number + " auditeurs ont décidé de danser sur de la musique électronique."
@@ -123,7 +123,7 @@ function putRandWeek()
     		break;
     	
     	case 5 :
-    		$.getJSON('/ThisWeekJazz/', function(data) {
+    		$.getJSON('./ThisWeekJazz/', function(data) {
     			number=data[0].value;
 				if (number>1)
     				document.getElementById("randomWeek").innerHTML ="Cette semaine, " + number + " auditeurs ont partagé leur musique de jazz préférée."
@@ -136,7 +136,7 @@ function putRandWeek()
     		break;
     	
     	case 6 :
-    		$.getJSON('/ThisWeekPop/', function(data) {
+    		$.getJSON('./ThisWeekPop/', function(data) {
     			number=data[0].value;
 				if (number>1)
     				document.getElementById("randomWeek").innerHTML ="Cette semaine, " + number + " auditeurs ont choisi de danser sur des chansons pop."
@@ -148,7 +148,7 @@ function putRandWeek()
     		});
     		break;
     	case 7 :
-    		$.getJSON('/ThisWeekNostalgique/', function(data) {
+    		$.getJSON('./ThisWeekNostalgique/', function(data) {
     			number=data[0].value;
 				if (number>1)
     				document.getElementById("randomWeek").innerHTML ="Cette semaine, " + number + " auditeurs se sentaient nostalgique."
@@ -159,7 +159,7 @@ function putRandWeek()
     		});
     		break;
     	case 8 :
-    		$.getJSON('/ThisWeekCool/', function(data) {
+    		$.getJSON('./ThisWeekCool/', function(data) {
     			number=data[0].value;
 				if (number>1)
     				document.getElementById("randomWeek").innerHTML ="Cette semaine, " + number + " auditeurs étaient d’humeur cool."
@@ -170,7 +170,7 @@ function putRandWeek()
     		});
     		break;
     	case 9 :
-    		$.getJSON('/ThisWeekStimulante/', function(data) {
+    		$.getJSON('./ThisWeekStimulante/', function(data) {
     			number=data[0].value;
 				if (number>1)
     				document.getElementById("randomWeek").innerHTML ="Cette semaine, " + number + " auditeurs ont voulu vous transmettre leur énergie."
@@ -181,7 +181,7 @@ function putRandWeek()
     		});
     		break;
     	case 10 :
-    		$.getJSON('/ThisWeekAgressive/', function(data) {
+    		$.getJSON('./ThisWeekAgressive/', function(data) {
     			number=data[0].value;
 				if (number>1)
     				document.getElementById("randomWeek").innerHTML ="Cette semaine, " + number + " auditeurs ont partagé des musiques énervées."
@@ -192,7 +192,7 @@ function putRandWeek()
     		});
     		break;
     	case 11 :
-    		$.getJSON('/ThisWeekSentimentale/', function(data) {
+    		$.getJSON('./ThisWeekSentimentale/', function(data) {
     			number=data[0].value;
 				if (number>1)
     				document.getElementById("randomWeek").innerHTML ="Cette semaine, " + number + " auditeurs ont choisi de partager leurs sentiments."

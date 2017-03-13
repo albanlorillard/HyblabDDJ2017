@@ -71,7 +71,7 @@ function coverToolTipOff()
 
 function giveCovers2()
 {
-    $.getJSON('/today', function(data2)
+    $.getJSON('./today', function(data2)
     {
         var CoverList = "";
         for (var i = 0, len = data2.length; i < len; i++) {
@@ -80,7 +80,7 @@ function giveCovers2()
                 (function(i) {
                     var title=data2[i].title;
                     var artist=data2[i].artist;
-                    $.getJSON('/Cover/' + artist + '/' + title + '/', function (data3) {
+                    $.getJSON('./Cover/' + artist + '/' + title + '/', function (data3) {
                         if (data3 && data3.track && data3.track.album && data3.track.album.image && (data3.track.album.image[2]['#text'] != "")) {
                             Cover = data3.track.album.image[2]['#text'];
                             CoverList += "<img src=\"" + Cover + "\"  onMouseOver=' coverToolTipOn2(\"" + esc_quot(artist) + "\", \"" + esc_quot(title) + "\");' onMouseOut='coverToolTipOff2();'/>";
