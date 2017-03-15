@@ -7,16 +7,26 @@ var mysql = require('mysql');        // Mysql NodeJS Modules.
 var configDB = require('./db.json'); // The JSON file with the database config connection
 
 
-/*var db = mysql.createConnection(configDB);
-db.connect(function(err){
-    if(err){
-        console.log("Error connection to database. Check if your database work and if login is correct");
-        return;
-    }
-    console.log("Connection to database establishedon.");
-});*/
+var mysql = require('mysql');
 
-var connection;
+    var pool  = mysql.createPool(configDB);
+    console.log("Create pool for mysql : OK.");
+
+/*pool.on('connection', function () {
+    console.log("Connection to database established");
+});
+
+pool.on('release', function (connection) {
+    console.log('Connection %d released', connection.threadId);
+});*/
+pool.on('enqueue', function () {
+    console.log('Waiting for available connection slot');
+});
+
+module.exports=pool;
+
+
+/*var connection;
 function handleDisconnect() {
     connection = mysql.createConnection(configDB); // Recreate the connection, since
                                                     // the old one cannot be reused.
@@ -42,9 +52,11 @@ function handleDisconnect() {
             throw err;                                  // server variable configures this)
         }
     });
+
 }
 
 handleDisconnect();
+ module.exports=connection;
+*/
 
-module.exports=connection;
 
