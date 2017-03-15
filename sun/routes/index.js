@@ -267,7 +267,7 @@ router.get('/getLast24', function(req, res, next)
     {
         data.getGenreCreneau4H(0, function(err, rows)
         {
-            if(err){res.json(err);}
+            if(err){reject(); res.json(err);}
             else{
                 proceed(rows);
                 resolve();
@@ -279,7 +279,7 @@ router.get('/getLast24', function(req, res, next)
     {
         data.getGenreCreneau4H(1, function(err, rows)
         {
-            if(err){res.json(err);}
+            if(err){/* ?????? */}
             else{
                 proceed(rows);
                 resolve();
@@ -291,7 +291,7 @@ router.get('/getLast24', function(req, res, next)
     {
         data.getGenreCreneau4H(2, function(err, rows)
         {
-            if(err){res.json(err);}
+            if(err){/* ?????? */}
             else{
                 proceed(rows);
                 resolve();
@@ -303,7 +303,7 @@ router.get('/getLast24', function(req, res, next)
     {
         data.getGenreCreneau4H(3, function(err, rows)
         {
-            if(err){res.json(err);}
+            if(err){/* ?????? */}
             else{
                 proceed(rows);
                 resolve();
@@ -316,7 +316,7 @@ router.get('/getLast24', function(req, res, next)
     {
         data.getGenreCreneau4H(4, function(err, rows)
         {
-            if(err){res.json(err);}
+            if(err){/* ?????? */}
             else{
                 proceed(rows);
                 resolve();
@@ -328,7 +328,7 @@ router.get('/getLast24', function(req, res, next)
     {
         data.getGenreCreneau4H(5, function(err, rows)
         {
-            if(err){res.json(err);}
+            if(err){/* ?????? */}
             else{
                 proceed(rows);
                 retour.push(alternatif);

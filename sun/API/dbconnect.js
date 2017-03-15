@@ -13,7 +13,7 @@ db.connect(function(err){
         console.log("Error connection to database. Check if your database work and if login is correct");
         return;
     }
-    console.log("Connection to database established");
+    console.log("Connection to database establishedon.");
 });*/
 
 var connection;
@@ -39,9 +39,7 @@ function handleDisconnect() {
             handleDisconnect();                         // lost due to either server restart, or a
         } else {                                      // connnection idle timeout (the wait_timeout
             console.log("Other db problem : ", err);
-            res.status(500);
-            return res.send(err);
-            //throw err;                                  // server variable configures this)
+            throw err;                                  // server variable configures this)
         }
     });
 }
