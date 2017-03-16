@@ -198,6 +198,16 @@ router.get('/getLast24', function(req, res, next)
 
     var elt = ['Alternative et punk','Electronica','Pop','Rock','Urban', 'Jazz'];
 
+    for (var z=0; z<6 ;z++)
+    {
+        alternatif.push(0);
+        electro.push(0);
+        pop.push(0);
+        rock.push(0);
+        urban.push(0);
+        jazz.push(0);
+    }
+
     function trouve(genre, array)
     {
         for (var j=0 ; j<array.length;j++)
@@ -209,55 +219,36 @@ router.get('/getLast24', function(req, res, next)
     }
 
 
-    function proceed(rows)
+    function proceed(rows, n)
     {
         for (var e in elt)
         {
             var el = trouve(elt[e],rows);
             if (el == -1)
             {
-                switch(elt[e])
-                {
-                    case "Alternative et punk":
-                        alternatif.push(0);
-                        break;
-                    case "Electronica":
-                        electro.push(0);
-                        break;
-                    case "Pop":
-                        pop.push(0);
-                        break;
-                    case "Rock":
-                        rock.push(0);
-                        break;
-                    case "Urban":
-                        urban.push(0);
-                        break;
-                    case "Jazz":
-                        jazz.push(0);
-                }
+                //Passe
             }
             else
             {
                 switch(elt[e])
                 {
                     case "Alternative et punk":
-                        alternatif.push(rows[el].value);
+                        alternatif[n]=rows[el].value;
                         break;
                     case "Electronica":
-                        electro.push(rows[el].value);
+                        electro[n]=rows[el].value;
                         break;
                     case "Pop":
-                        pop.push(rows[el].value);
+                        pop[n]=rows[el].value;
                         break;
                     case "Rock":
-                        rock.push(rows[el].value);
+                        rock[n]=rows[el].value;
                         break;
                     case "Urban":
-                        urban.push(rows[el].value);
+                        urban[n]=rows[el].value;
                         break;
                     case "Jazz":
-                        jazz.push(rows[el].value);
+                        jazz[n]=rows[el].value;
                 }
             }
         }
@@ -269,7 +260,7 @@ router.get('/getLast24', function(req, res, next)
         {
             if(err){reject(); res.json(err);}
             else{
-                proceed(rows);
+                proceed(rows,1);
                 resolve();
             }
         });
@@ -281,7 +272,7 @@ router.get('/getLast24', function(req, res, next)
         {
             if(err){/* ?????? */}
             else{
-                proceed(rows);
+                proceed(rows,2);
                 resolve();
             }
         });
@@ -293,7 +284,7 @@ router.get('/getLast24', function(req, res, next)
         {
             if(err){/* ?????? */}
             else{
-                proceed(rows);
+                proceed(rows,3);
                 resolve();
             }
         });
@@ -305,7 +296,7 @@ router.get('/getLast24', function(req, res, next)
         {
             if(err){/* ?????? */}
             else{
-                proceed(rows);
+                proceed(rows,4);
                 resolve();
             }
         });
@@ -318,7 +309,7 @@ router.get('/getLast24', function(req, res, next)
         {
             if(err){/* ?????? */}
             else{
-                proceed(rows);
+                proceed(rows,5);
                 resolve();
             }
         });
@@ -330,24 +321,22 @@ router.get('/getLast24', function(req, res, next)
         {
             if(err){/* ?????? */}
             else{
-                proceed(rows);
-                retour.push(alternatif);
-                retour.push(electro);
-                retour.push(pop);
-                retour.push(rock);
-                retour.push(urban);
-                retour.push(jazz);
+                proceed(rows,6);
                 resolve();
             }
         });
     });
 
-    p.then(function() { return p1; })
-        .then(function() { return p2; })
-        .then(function() { return p3; })
-        .then(function() { return p4; })
-        .then(function() { return p5; })
-        .then(function() { res.json(retour);});
+   Promise.all([p1,p2,p3,p4,p5])
+        .then(function() {
+            retour.push(alternatif);
+            retour.push(electro);
+            retour.push(pop);
+            retour.push(rock);
+            retour.push(urban);
+            retour.push(jazz);
+            res.json(retour);
+        });
 
 });
 
